@@ -1,0 +1,15 @@
+sql query that fetch sales per day
+SELECT sale_date,sum(amount) FROM sales GROUP BY sale_date;
+
+profit per day
+SELECT s.sale_date,sum((p.selling_price-p.buying_price)*s.quantity FROM sales join products on sales.product_id=products.product_id AS total_profit GROUP BY sales date);
+
+profit per product
+SELECT p.product_name,sum((p.selling_price-p.buying_price))*s.quantity FROM sales join products on sales.product_id=products.product_id AS profit group by product_name;
+
+
+
+use function to get
+stock()
+
+
